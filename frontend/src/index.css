@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #292929;
+}
+
+.chat__header {
+  margin: 30px 0 20px 0;
+}
+
+.chat__users > * {
+  margin-bottom: 10px;
+  color: #89a8d6;
+  font-size: 14px;
+}
+
+.chat__sidebar {
+  height: 100%;
+  background-color: #2c2b2a;
+  flex: 0.2;
+  padding: 20px;
+  border-right: 1px solid #fdfdfd;
+  color: white;
+}
+
+.chat__mainHeader {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #444340;
+  color: white;
+}
+
+.message__container > * {
+  margin-bottom: 10px;
+}
+
+.message {
+  width: 80%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid #494949;
+  outline: none;
+  padding: 15px;
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  .message {
+    width: 300px;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    padding: 15px;
+    
+  }
+
+  .message__container {
+    width: 100%;
+    height: 80vh;
+    background-color: #525252;
+    padding: 20px;
+    overflow-y: scroll;
+    color: white;
+  }
+
+  .message__recipient {
+    background-color: #3a3a3a;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+  .chat {
+    overflow-y: hidden;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 160px 1220px;
+    align-items: center;
+  }
+
+  .chat__main {
+    height: 1220px;
+    flex: 0.8;
+  }
+
+  .chat__header {
+    margin: 30px 0 20px 0;
+  }
+  
+  .chat__users > * {
+    margin-bottom: 10px;
+    color: #607eaa;
+    font-size: 14px;
+  }
+  
+  .chat__sidebar {
+    height: 100%;
+    background-color: #5c5a57;
+    flex: 0.2;
+    padding: 20px;
+    border-right: 1px solid #fdfdfd;
+  }
+  
+  .chat__mainHeader {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #504f4c;
+  }
+  
+  .message__container > * {
+    margin-bottom: 10px;
+  }
+  
+  .message__sender {
+    background-color: rgb(73, 79, 82);
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: auto;
+    font-size: 15px;
+  }
+}
+
+.chat__main {
+  height: 100%;
+  flex: 0.8;
+}
+
+.message__chats > p {
+  font-size: 13px;
+}
+
+.sender__name {
+  text-align: right;
+}
+.typing__status {
+  position: fixed;
+  bottom: 90px;
+  margin-left: 12px;
+  font-size: 13px;
+  font-style: italic;
+  color: white;
+}
+
+/* Form */
+
+.FormRoot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 720px;
+}
+.Input,
+.Textarea {
+  width: 640px;
+  border-radius: 4px;
+
+  font-size: 15px;
+  color: black;
+}
+
+@media (min-width: 1200px) {
+  .FormField {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  
+  .FormLabel {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 35px;
+    color: gray;
+  }
+  
+  .FormMessage {
+    font-size: 13px;
+    color: black;
+    opacity: 0.8;
+  }
+  .FormRoot {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 2%;
+    width: 1060px;
+  }
+  .Input,
+  .Textarea {
+    width: 900px;
+    border-radius: 4px;
+    
+    font-size: 15px;
+    color: black;
+  }
+}
+
+.Input:hover,
+.Textarea:hover {
+  box-shadow: 0 0 0 1px black;
+}
+.Input:focus,
+.Textarea:focus {
+  box-shadow: 0 0 0 2px black;
+}
+.Input::selection,
+.Textarea::selection {
+  background-color: var(--black-a9);
+  color: black;
+}
+
+.Input {
+  padding: 0 10px;
+  height: 35px;
+  line-height: 1;
+  transition: 0.2s;
+}
+
+.Textarea {
+  resize: none;
+  padding: 10px;
+  transition: 0.2s;
+}
+
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 500;
+  height: 35px;
+  width: 100%;
+  transition: 0.1s;
+  background-color: white;
+  color: black;
+}
+.Button:hover {
+  background-color: rgba(214, 214, 214, 0.815);
+}
+.Button:focus {
+  box-shadow: 0 0 0 2px black;
+}
+
